@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <style>
+    body { width: 240px; padding: 16px; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; font-size: 14px; }
+    h3 { margin: 0 0 12px; font-size: 15px; }
+    label { display: flex; align-items: center; gap: 8px; margin-bottom: 10px; cursor: pointer; }
+    input[type=range] { width: 100%; margin: 6px 0 12px; }
+    button { width: 100%; padding: 8px; background: #1a6b3c; color: white; border: none; border-radius: 6px; cursor: pointer; font-size: 13px; margin-top: 4px; }
+    button:hover { background: #155730; }
+    .status { font-size: 12px; color: #666; margin-top: 8px; text-align: center; }
+    hr { margin: 12px 0; border: none; border-top: 1px solid #ddd; }
+    #raisedList { font-size: 12px; color: #333; min-height: 20px; margin-top: 4px; }
+    .hand-item { display: flex; justify-content: space-between; align-items: center; padding: 5px 8px; background: #f0f9f4; border-radius: 4px; margin-bottom: 4px; }
+    .hand-name { font-weight: 500; }
+    .hand-timer { font-size: 11px; color: #888; font-variant-numeric: tabular-nums; margin-left: 8px; white-space: nowrap; }
+    .no-hands { color: #999; font-style: italic; }
+  </style>
+</head>
+<body>
+  <h3>✋ Hand Raise Alert</h3>
+
+  <label>
+    <input type="checkbox" id="soundEnabled"> Sound alerts
+  </label>
+  <label>
+    <input type="checkbox" id="visualEnabled"> Visual notifications
+  </label>
+  <label>
+    <input type="checkbox" id="repeatAlert"> Repeat alert every 8s
+  </label>
+
+  <div>Volume</div>
+  <input type="range" id="volume" min="0" max="100" value="70">
+
+  <button id="testBtn">🔔 Test Alert</button>
+  <div class="status" id="status"></div>
+
+  <hr>
+  <div style="font-weight:bold; margin-bottom:6px;">✋ Currently Raised</div>
+  <div id="raisedList"><span class="no-hands">Checking...</span></div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
