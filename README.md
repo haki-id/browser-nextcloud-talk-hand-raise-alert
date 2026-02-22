@@ -24,7 +24,7 @@ A browser extension that alerts moderators when participants raise their hand du
 
 ### Firefox
 
-> 🔜 Coming soon to the Firefox Add-ons store. Check back here for the install link once it is available.
+> 🔜 Available in the Firefox Add-ons store https://addons.mozilla.org/developers/addon/2982307/versions
 
 ### Safari
 
